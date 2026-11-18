@@ -8,8 +8,7 @@ mediclaim-app/
 ├── venv/                 # virtual environment (create locally, not uploaded to GitHub)
 ├── app.py                # Streamlit app
 ├── Mediclaim.ipynb       # data cleaning, EDA, model training
-├── data/
-│   └── mediclaim_raw.csv
+├── mediclaim_raw.csv
 ├── model/
 │   └── insurance_model_pipeline.pkl
 ├── requirements.txt
@@ -27,12 +26,12 @@ streamlit run app.py
 ```
 
 ## Deploy to Streamlit Community Cloud
-1. Make sure `data/mediclaim_raw.csv` and
+1. Make sure `mediclaim_raw.csv` and
    `model/insurance_model_pipeline.pkl` are included in the GitHub repository.
    The app needs both files at these exact relative paths.
 2. Add and push the app and its required files to GitHub:
    ```bash
-   git add app.py data/mediclaim_raw.csv model/insurance_model_pipeline.pkl requirements.txt README.md
+   git add app.py mediclaim_raw.csv model/insurance_model_pipeline.pkl requirements.txt README.md
    git commit -m "Add mediclaim Streamlit app"
    git push
    ```

@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 st.set_page_config(page_title="Mediclaim Cost Predictor", page_icon="🏥", layout="wide")
 
 BASE = Path(__file__).resolve().parent
-DATA_PATH = BASE / "data" / "mediclaim_raw.csv"
+DATA_PATH = BASE / "mediclaim_raw.csv"
 MODEL_PATH = BASE / "model" / "insurance_model_pipeline.pkl"
 REGIONS = ["northeast", "northwest", "southeast", "southwest"]
 
@@ -26,7 +26,6 @@ for path, label in (
             "then redeploy the app."
         )
         st.stop()
-
 
 # ---------------------------------------------------------------- data + model
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
